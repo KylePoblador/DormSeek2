@@ -27,5 +27,13 @@
       <div class="text-dorm-primary font-bold">₱{{ number_format($property->price, 2) }}</div>
       <a href="{{ route('properties.show', $property->id) }}" class="text-sm text-blue-600">View</a>
     </div>
+
+    <div class="mt-2">
+      @if(isset($property->is_available) ? $property->is_available : ($property->is_published ?? false))
+        <span class="text-green-600 font-semibold">Available</span>
+      @else
+        <span class="text-red-600 font-semibold">Not Available</span>
+      @endif
+    </div>
   </div>
 </article>

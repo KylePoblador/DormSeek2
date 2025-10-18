@@ -2,6 +2,12 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    @if (session('success'))
+        <div class="mb-4 text-green-600 text-sm">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -22,6 +28,7 @@
                             required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <p class="text-xs text-gray-500 mt-2">Admins will be redirected to the admin dashboard automatically.</p>
         </div>
 
         <!-- Remember Me -->
@@ -42,6 +49,15 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-sm text-gray-600">
+                Don’t have an account?
+                <a href="{{ route('register') }}" class="text-blue-600 hover:underline font-semibold">
+                    Register here
+                </a>
+            </p>
         </div>
     </form>
 </x-guest-layout>

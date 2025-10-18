@@ -17,8 +17,8 @@ class PropertyFactory extends Factory
             'description' => $this->faker->paragraphs(3, true),
             'address' => $this->faker->streetAddress,
             'city' => $this->faker->city,
-            'price' => $this->faker->numberBetween(2000,12000),
-            'beds' => $this->faker->numberBetween(1,5),
+            'price' => $this->faker->numberBetween(1000,2500),
+            'beds' => $this->faker->numberBetween(2,5),
             'baths' => $this->faker->numberBetween(1,3),
             'area' => $this->faker->numberBetween(150,1200),
             'images' => ['placeholder-1.jpg','placeholder-2.jpg'], // make sure placeholder files exist in storage

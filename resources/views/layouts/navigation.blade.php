@@ -5,8 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="{{ route('dashboard') }}" class="flex items-center space-x-2">
+                        <img src="{{ asset('images/logo.png') }}" alt="DormSeek Logo" class="h-8 w-8">
+                        <span class="font-bold text-lg text-gray-800">DORMSEEK</span>
                     </a>
                 </div>
 

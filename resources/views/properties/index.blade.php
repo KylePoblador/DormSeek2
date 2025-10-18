@@ -7,14 +7,12 @@
       <aside class="w-64 hidden lg:block">
         <div class="bg-white p-4 rounded shadow-sm">
           <h4 class="font-semibold mb-3">Filters</h4>
-          <form method="GET" action="{{ route('home') }}">
-            <label class="block text-sm">City</label>
-            <select name="city" class="w-full border rounded px-2 py-1 mb-3">
-              <option value="">All cities</option>
-              @foreach($cities as $c)
-                <option value="{{ $c }}" {{ request('city') == $c ? 'selected' : '' }}>{{ $c }}</option>
-              @endforeach
-            </select>
+          <form method="GET" action="{{ route('dashboard') }}">
+            <label class="block text-sm">Kabacan</label>
+            {{-- <select name="city" class="border rounded p-2">
+    <option value="">All Cities</option>
+    <option value="Kabacan">Kabacan</option>
+</select> --}}
 
             <label class="block text-sm">Min price</label>
             <input name="min_price" value="{{ request('min_price') }}" class="w-full border rounded px-2 py-1 mb-3" />

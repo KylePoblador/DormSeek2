@@ -15,10 +15,22 @@
           </div>
 
           <div class="p-4 grid grid-cols-4 gap-2">
-            @if($property->images)
-              @foreach($property->images as $img)
-                <img src="{{ asset('storage/properties/'.$img) }}" class="h-20 w-full object-cover cursor-pointer" onclick="document.getElementById('mainImage').src = '{{ asset('storage/properties/'.$img) }}'">
+            @php
+                $decodedImages = json_decode($property->images, true);
+                if (!is_array($decodedImages)) {
+                    $decodedImages = [];
+                }
+            @endphp
+
+            @if(!empty($decodedImages))
+              @foreach($decodedImages as $img)
+                <img 
+                  src="{{ asset('properties/'.$img) }}" 
+                  class="h-20 w-full object-cover cursor-pointer" 
+                  onclick="document.getElementById('mainImage').src = '{{ asset('properties/'.$img) }}'">
               @endforeach
+            @else
+              <p class="col-span-4 text-center text-gray-400">No images available</p>
             @endif
           </div>
 
