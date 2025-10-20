@@ -28,7 +28,6 @@
                             required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            <p class="text-xs text-gray-500 mt-2">Admins will be redirected to the admin dashboard automatically.</p>
         </div>
 
         <!-- Remember Me -->
