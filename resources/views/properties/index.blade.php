@@ -29,6 +29,10 @@
         <div class="mb-6 flex items-center justify-between">
           <h2 class="text-2xl font-semibold">Available dorms</h2>
           <div class="text-sm text-gray-600">{{ $properties->total() }} results</div>
+          <button type="button" onclick="window.history.back();" class="inline-flex items-center px-3 py-1.5 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              Back
+            </button>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
