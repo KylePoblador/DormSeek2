@@ -48,7 +48,7 @@
                 <label for="role" class="block text-sm font-medium text-gray-700">Register as:</label>
                 <select id="role" name="role" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200">
                     <option value="user">User</option>
-                    <option value="admin">Admin</option>
+                    
                 </select>
             </div>
 

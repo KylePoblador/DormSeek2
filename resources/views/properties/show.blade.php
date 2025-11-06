@@ -49,8 +49,23 @@
         <div class="bg-white p-4 rounded shadow">
           <div class="text-2xl font-bold text-dorm-primary">₱{{ number_format($property->price, 2) }}</div>
           <div class="mt-3 text-sm text-gray-600">Beds: {{ $property->beds }} • Baths: {{ $property->baths }}</div>
-          <a href="#" class="mt-4 inline-block w-full text-center bg-dorm-primary text-white px-4 py-2 rounded">Contact landlord</a>
-        </div>
+          <a style="color:black" href="#" class="mt-4 inline-block w-full text-center bg-dorm-primary text-white px-4 py-2 rounded">Contact landlord</a>
+          <ol>
+            <li>Aminities:</li>
+            <li>Own electric meter</li>   
+            <li>Shared water bill payment</li>
+            <li>Fully furnished rooms</li>
+            <li>Free Wi-Fi</li>
+            <li>Shared Kitchen and bathroom</li>
+            <li>Laundry and drying area</li>
+            <li>S24-hours security and CCTV</li>
+            <li>Parking space available</li>
+            <li>Proper waste disposal</li>
+            <li>Map:</li>
+            <a style="color:Blue" href="https://www.google.com/maps/place/Kabacan,+Cotabato/@7.1044334,124.8274905,16.5z/data=!4m6!3m5!1s0x32f88d9ef847ea1d:0xfbbc1d48c7ef7972!8m2!3d7.1071923!4d124.8403408!16zL20vMDZuOW43?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Click here for location</a>
+            
+            </ol>
+        </div> 
       </aside>
     </div>
   </div>
