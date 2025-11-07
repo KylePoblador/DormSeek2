@@ -49,7 +49,7 @@
         <div class="bg-white p-4 rounded shadow">
           <div class="text-2xl font-bold text-dorm-primary">₱{{ number_format($property->price, 2) }}</div>
           <div class="mt-3 text-sm text-gray-600">Beds: {{ $property->beds }} • Baths: {{ $property->baths }}</div>
-          <a style="color:black" href="#" class="mt-4 inline-block w-full text-center bg-dorm-primary text-white px-4 py-2 rounded">Contact landlord</a>
+          <a style="color:black" href="#" class="mt-4 inline-block w-full text-center bg-dorm-primary text-white px-4 py-2 rounded">Contact landlord: 09123628635</a>
           <ol>
             <li>Aminities:</li>
             <li>Own electric meter</li>   
