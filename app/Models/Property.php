@@ -11,13 +11,14 @@ class Property extends Model
 
     protected $fillable = [
         'user_id','title','slug','description','address','city',
-        'price','beds','baths','area','images','is_published'
+        'price','beds','baths','area','images','is_published','is_available'
     ];
 
     protected $casts = [
         'images' => 'array',
         'is_published' => 'boolean',
-        'price' => 'decimal:2',
+        'is_available' => 'boolean',
+        'price' => 'float',
     ];
 
     // Accessor for primary image url
