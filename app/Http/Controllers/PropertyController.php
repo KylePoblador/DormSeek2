@@ -26,8 +26,13 @@ class PropertyController extends Controller
             });
         }
         if ($city) $query->where('city', $city);
-        if ($min) $query->where('price', '<=', (float)$min);
-        if ($max) $query->where('price', '>=', (float)$max);
+        if ($min !== null && $min !== '') {
+            $query->where('price', '<=', (float)$min);
+        }
+        if ($max !== null && $max !== '') {
+            $query->where('price', '>=', (float)$max)
+                  ->orderBy('price', 'desc');
+        }
         if ($beds) $query->where('beds', $beds);
 
         $properties = $query->orderBy('created_at', 'desc')->paginate(6)->withQueryString();

@@ -2,11 +2,6 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
         
-        <div class="flex justify-end mb-4">
-            <button type="button" onclick="window.history.back();" class="inline-flex items-center px-3 py-1.5 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                Back
-            </button>
-        </div>
         
         <!-- Name -->
         <div>
@@ -50,13 +45,6 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <div class="mt-4 w-full mr-4">
-                <label for="role" class="block text-sm font-medium text-gray-700">Register as:</label>
-                <select id="role" name="role" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200">
-                    <option value="user">User</option>
-                    
-                </select>
-            </div>
 
             <x-primary-button class="ms-4">
                 {{ __('Register') }}
